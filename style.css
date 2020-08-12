@@ -1,0 +1,313 @@
+:root {
+  --base-color: black;
+  --text-color: white;
+  --primary-color: #3f51b5;
+  --secondary-color: #757575;
+  --disabled-color: #9e9e9e;
+  --divider-color: #e0e0e0;
+  --accent-color: #ff4081;
+  --highlight-color: yellow;
+  /* --mobile-size: 320px;
+  --tablet-size: 768px;
+  --desktop-size: 1024px; */
+}
+
+/* Add any CSS you need to this file. 
+
+Name: Jun Song
+Seneca ID Number : 141973198
+Date: 2020-08-06
+Student ID: jsong89
+All images from Unsplash.
+Url: https://unsplash.com
+*/
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Quicksand', 'Noto Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: var(--base-color);
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--base-color);
+}
+
+i:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#title {
+  font-family: 'Geneva';
+}
+
+header nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  font-size: 1.5rem;
+}
+
+header nav .item:nth-child(2) {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.menus > .item {
+  padding: 11px;
+}
+
+.menus > .item > a {
+  color: white;
+}
+
+.menus > .item:hover {
+  background-color: cornsilk;
+  color: #dce3ff;
+}
+
+.menus > .item:hover > a {
+  color: #000723;
+}
+
+.hidden {
+  height: 0px;
+  transform: scale(1, 0);
+  transform-origin: top;
+  text-align: center;
+  width: 100%;
+  background-color: #c5c5c5;
+}
+
+.show {
+  height: 80px;
+  transform-origin: top;
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+  text-align: center;
+  width: 100%;
+  background-color: #c5c5c5;
+}
+
+header .main-image {
+  width: 100%;
+  height: 38vh;
+  background-image: url(./images/main.jpg);
+  background-size: cover;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+main .top .filter {
+  font-family: 'Noto Sans', sans-serif;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+main .top .filter .item:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.line {
+  margin-top: 20px;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+main .items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+main .items .item {
+  margin: 10px;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.item .image-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.item .image-container:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s linear;
+  color: var(--accent-color);
+}
+
+.item-container .description .info {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-container .description .desc {
+  margin: 10px;
+  font-size: 0.7rem;
+}
+
+#currency {
+  font-size: 0.8em;
+  opacity: 0.7;
+  text-align: right;
+  margin: 0px 70px 0px 0px;
+}
+
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-form > .item {
+  box-sizing: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  margin: 1rem 0;
+}
+
+.contact-form .radio {
+  border: 0;
+  display: flex;
+}
+
+.contact-form input[type='submit'] {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+#postal-error {
+  color: var(--accent-color);
+  display: none;
+}
+
+#problem {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 1rem auto;
+  height: 12vh;
+}
+
+footer .item a {
+  color: var(--base-color);
+}
+
+footer .item > a {
+  text-decoration: none;
+  margin: 1rem;
+}
+
+footer .item > a:hover {
+  color: var(--accent-color);
+  transition: color 0.5s ease;
+}
+
+footer form input {
+  border: 0;
+  border-bottom: 1px solid var(--base-color);
+  padding: 0 0 8px 3px;
+  outline: none;
+}
+
+footer form button {
+  background-color: var(--accent-color);
+  border: 0;
+  padding: 0.5rem;
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+}
+
+footer form button:hover {
+  background-color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+@media all and (max-width: 768px) {
+  main .items {
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 520px) {
+  header .main-image .title {
+    display: none;
+  }
+
+  main .items {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+
+  main .top .filter {
+    flex-direction: column;
+  }
+
+  .filter > div {
+    padding: 0 0 20px 0;
+  }
+
+  .contact-form .radio {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 320px) {
+  main .items {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+  footer form input {
+    width: 130px;
+  }
+}
